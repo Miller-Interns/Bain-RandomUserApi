@@ -35,7 +35,7 @@ function close() {
   z-index: 1000;
 }
 .modal-content {
-  background: white;
+  background: rgb(20, 5, 5);
   padding: 2rem;
   border-radius: 12px;
   width: 90%;

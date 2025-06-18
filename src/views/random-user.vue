@@ -56,35 +56,76 @@ watch(page, async () => {
 
 <style scoped>
 .dashboard {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  margin: 2rem auto;
+  padding: 2rem 2rem 1rem;
+  background: var(--color-background, #ffffff);
+  color: var(--color-text, #181818);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push content to the top */
+  box-sizing: border-box;
 }
 
 .dashboard__title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .dashboard__user-list {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 0;
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 .dashboard__user-item {
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.2;
+}
+
+.dashboard__user-item strong {
+  font-weight: bold;
 }
 
 .dashboard__pagination {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.95rem;
+  padding-top: 1rem;
+}
+
+.dashboard__pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dashboard__pagination button:hover:enabled {
+  background-color: #e6e6e6;
+}
+
+.dashboard__pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 </style>

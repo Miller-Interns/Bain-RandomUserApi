@@ -24,12 +24,12 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    justify-content: center; /* horizontally center content */
+    align-items: flex-start; /* or center if you want vertical too */
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: block; /* remove the 2-column grid */
+    padding: 2rem;
   }
 }
